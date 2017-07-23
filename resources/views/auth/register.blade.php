@@ -4,12 +4,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-custom">
+            <div class="panel panel-info">
            
-                <div class="panel-heading panel-heading-custom"><i class="fa fa-user"></i>  Register</div>
+                <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    {!! Form::open(['url'=>'/register','class'=>'form-horizontal','data-sitekey'=>'6Lc5ticUAAAAALxsQqGMx4eMrinVkfsnXUnyxdq4']) !!}
-                    
+                    {!! Form::open(['url'=>'/register','class'=>'form-horizontal']) !!}
+
                     <div class="form-group{{$errors->has('name') ? 'has-error' : ''}} ">
                         {!! Form::label('name','Nama',['class'=>'col-md-4 control-label']) !!}
                         <div class="col-md-6">
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="form-group{{$errors->has('email') ? 'has-error' : ''}} ">
-                        {!! Form::label('email','Email',['class'=>'col-md-4 control-label']) !!}
+                        {!! Form::label('email','Alamat email',['class'=>'col-md-4 control-label']) !!}
                         <div class="col-md-6">
                             {!! Form::email('email',null,['class'=>'form-control']) !!}
                             {!! $errors->first('email','<p class="help-block">:message</p>')!!}
@@ -41,18 +41,11 @@
                             {!! $errors->first('password_confirmation','<p class="help-block">:message</p>')!!}
                         </div>
                     </div>
-                    <div class="form-group {{$errors->has('g-recaptcha-response')? 'has-error' : ''}} ">
-                        <div class="col-md-offset-4 col-md-6" >
-
-                            {!! app('captcha')->display() !!}
-                            {!! $errors->first('g-recaptcha-response','<p class="help-block">:message</p>') !!}
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-btn fa-user"></i> Daftar
+                                <i class="fa fa-btn fa-user"></i>Daftar
                             </button>
                         </div>
                     </div>

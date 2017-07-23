@@ -13,19 +13,13 @@
     <!-- Styles -->
     <link href="{{asset('/css/app.css')}}" rel="stylesheet">
     <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
     <link href="{{asset('/css/dataTables.bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('/css/jquery.dataTables.css')}}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crafty+Girls" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
     <style>
 
     body {
-          font-family: 'Comfortaa';
-          background-image: url({{asset ('.jpg') }});
+          font-family: 'Times New Roman';
+          background-image: url({{asset ('img/a.jpg') }});
           background-repeat: no-repeat;
           background-size: cover;
           background-attachment: fixed;
@@ -44,7 +38,7 @@
          }
     .panel-title-custom {
           color: orange;
-          font-family: 'Comfortaa';
+          font-family: 'Times New Roman';
          }
     table{
           border-radius: 15px; 
@@ -58,7 +52,7 @@
           
          }
     h1{
-       font-family: 'Comfortaa';
+       font-family: 'Times New Roman';
     }
     hr{
       border-color: rgba(30,30,30,0.5);
@@ -75,7 +69,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-custom navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -104,9 +98,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Daftar</a></li>
+                        <!-- @if (Auth::guest())
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Daftar</a></li> -->
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -114,14 +108,15 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    
                                     <li>
-                                        <a href="{{ url('/logout') }}"
+                                        <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
@@ -137,12 +132,12 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{asset('/js/app.js')}}"></script>
-    <script src="{{asset('/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('/js/dataTables.bootstrap.min.js')}}"></script>
-    <script src="{{asset('/js/custom.js')}}"></script>
-    <script src="{{asset('/js/bootstrap.js')}}"></script>
-    <script src="{{asset('/js/jquery.js')}}"></script>
+    <script src='/js/app.js'></script>
+    <script src='/js/jquery.dataTables.min.js'></script>
+    <script src='/js/dataTables.bootstrap.min.js'></script>
+    <script src='/js/custom.js'></script>
+
+    <script src='/js/jquery.js'></script>
 
 </body>
 </html>

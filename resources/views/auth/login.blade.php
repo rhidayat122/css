@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-        <div class="panel panel-custom">
+        <div class="panel">
 
-                <div class="panel-heading panel-heading-custom"><i class="fa fa-sign-in"></i>  Login</div>
+                <div class="panel-heading"><center><h4><b>Silahkan Masuk Menggunakan Akun Anda</b></h4></center></div>
                 <div class="panel-body">
                    {!! Form::open(['url'=>'login','class'=>'form-horizontal']) !!}
 
                    <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
-                       {!! Form::label('email','Email',['class'=>'col-md-4 control-label']) !!}
+                       {!! Form::label('email','Alamat Email',['class'=>'col-md-4 control-label']) !!}
                        <div class="col-md-6">
                           {!! Form::email('email',null,['class'=>'form-control']) !!}
                           {!! $errors->first('email','<p class="help-block">:message</p>') !!}
@@ -39,7 +39,7 @@
                    <div class="form-group">
                        <div class="col-md-6 col-md-offset-4">
                           <button type="submit" class="btn btn-primary">
-                              <i class="fa fa-btn fa-sign-in"></i> Login
+                              <i class="fa fa-btn fa-sign-in"></i>Login
                           </button>
                           <a class="btn btn-link" href="{{url('/password/reset')}}">Lupa password</a>
 
