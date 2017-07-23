@@ -83,7 +83,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                       <img src="assets/img/ui-sam.png" class="img-circle" width="60"></a></p> Motor
                     </a>
                 </div>
 
